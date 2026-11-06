@@ -34,15 +34,15 @@ document.querySelectorAll("[data-next]").forEach(function (button) {
 
 const photos = [
     {
-        src: "images/photo1.jpeg",
+        src: "photo1.jpeg",
         caption: "My favourite person ♡"
     },
     {
-        src: "images/photo2.png",
+        src: "photo2.png",
         caption: "A little piece of happiness 💗"
     },
     {
-        src: "images/photo3.png",
+        src: "photo3.png",
         caption: "My forever favourite memory 🥹"
     }
 ];
