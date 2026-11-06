@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffe6f0">
+  <title>For My Sovi 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="hearts" aria-hidden="true"></div>
+
+  <main>
+    <!-- SCREEN 1: WELCOME -->
+    <section class="screen welcome active" id="welcome">
+      <div class="tiny-label">A LITTLE SURPRISE FOR YOU ♡</div>
+      <div class="sticker">🎀</div>
+      <p class="eyebrow">To my favourite person</p>
+      <h1>Happy Birthday,<br><span>My Sovi!</span> 💗</h1>
+      <p class="intro">
+        To my baby, my darlin, my babe...
+        the one of the favorite person in this world.💗
+      </p>
+      <div class="big-heart">♡</div>
+      <button class="primary" data-next="birthday">
+        Tap to open your surprise 💌
+      </button>
+      <p class="hint">Made with all my love, just for you</p>
+    </section>
+
+    <!-- SCREEN 2: BIRTHDAY WISH -->
+    <section class="screen paper" id="birthday">
+      <div class="tiny-label">it's Your Special Day, Babe! ♡</div>
+      <div class="sticker">🎂</div>
+      <h2>It's your special day, babe!</h2>
+      <p>
+        Happy birthday to my baby boy who makes my heart smile.
+        I wish I could hug you right now and tell you a thousand
+        times how special you are to me.
+      </p>
+      <p>
+        No matter how far apart we are, you will always have
+            a special place in my heart.
+            I hope this new year of your life brings you happiness, success, peace and
+            everything you dream of and obviously me. 🧿
+      </p>
+      <p class="handwritten">Forever cheering for you, baby. 💗</p>
+      <button class="primary" data-next="memories">
+        Our little memories 📸
+      </button>
+      <button class="text-button" data-next="welcome">← Go back</button>
+    </section>
+
+    <!-- SCREEN 3: PHOTO SLIDESHOW -->
+    <section class="screen paper" id="memories">
+      <div class="tiny-label">LITTLE PIECES OF US ♡</div>
+      <h2>Our little world 📸</h2>
+      <p class="muted">Every picture holds a little piece of my heart.</p>
+
+      <div class="polaroid">
+        <img id="slidePhoto" src="images/photo1.jpeg"
+             alt="A favourite memory of us">
+        <p id="slideCaption">My favourite person ♡</p>
+      </div>
+
+      <div class="slide-controls">
+        <button id="previousPhoto" aria-label="Previous photo">‹</button>
+        <span id="slideCount">1 / 3</span>
+        <button id="nextPhoto" aria-label="Next photo">›</button>
+      </div>
+      <p class="hint">You can also swipe the photo ↔</p>
+
+      <button class="primary" data-next="reasons">
+        A few things I love about you 💕
+      </button>
+      <button class="text-button" data-next="birthday">← Go back</button>
+    </section>
+
+    <!-- SCREEN 4: REASONS -->
+    <section class="screen paper" id="reasons">
+      <div class="tiny-label">A LITTLE LIST FROM MY HEART ♡</div>
+      <h2>Why you're so special</h2>
+
+      <div class="reason-list">
+        <article class="reason">
+          <span>🥹</span>
+          <div><h3>Your smile</h3>
+            <p>Because it can make my whole day better.</p></div>
+        </article>
+        <article class="reason">
+          <span>💗</span>
+          <div><h3>Your love</h3>
+            <p>You make me feel loved in my own little world without any lalch.</p></div>
+        </article>
+        <article class="reason">
+          <span>🌷</span>
+          <div><h3>Our bond</h3>
+            <p>I love all the little things that make us, us.</p></div>
+        </article>
+        <article class="reason">
+          <span>🧸</span>
+          <div><h3>Simply you</h3>
+            <p>Because I only love my babe.</p></div>
+        </article>
+      </div>
+
+      <button class="primary" data-next="letter">
+        I wrote you a letter ✉️
+      </button>
+      <button class="text-button" data-next="memories">← Go back</button>
+    </section>
+
+    <!-- SCREEN 5: INTERACTIVE LOVE LETTER -->
+    <section class="screen paper letter-screen" id="letter">
+      <div class="tiny-label">JUST FOR YOU, DARLIN ♡</div>
+      <h2>A little letter for you</h2>
+      <p class="muted">There's something I want you to read...</p>
+
+      <button id="envelope" class="envelope" aria-label="Open your love letter">
+        <span class="envelope-flap"></span>
+        <span class="envelope-heart">♥</span>
+        <span class="envelope-label">For my bby</span>
+      </button>
+      <p class="hint">Tap the envelope to open it 💌</p>
+
+      <article id="loveLetter" class="love-letter" hidden>
+        <p>My dear SMILE, 💗</p>
+        <p>Once again happy happy happy happiest birthday to My Love.</p>
+        <p>
+           If I could give you one thing in life, I would give you the ability to be always with me, because you only need me and me, hahahaha. 
+                Don't try to leave me, okay? because now you are fas chukya with me. 🥹
+        </p>
+        <p>
+          Thank you for being a part of my life, for the
+                memories we share and for all the little moments
+                that mean so much to me, specially that first time we met, that first hug.
+        </p>
+        <p>
+           On your birthday, I wish you endless smiles,
+                beautiful life with me and our future kids and all the happiness
+                your heart can hold, and I wish this is the last birthday we're celebrating far from each other. I Just want to be with you, jldi si aaja motte. 
+        </p>
+         <p>
+                No matter how many birthdays come and go, I hope
+                we keep making beautiful memories together, and
+                I'll always be here for you no matter what situation it is.🧿
+            </p>
+        <p class="handwritten">All my love, always. ❤️<br>Your girl ♡</p>
+      </article>
+
+      <button class="primary" data-next="final">
+        One last surprise 🎁
+      </button>
+      <button class="text-button" data-next="reasons">← Go back</button>
+    </section>
+
+    <!-- SCREEN 6: FINAL SURPRISE -->
+    <section class="screen final-screen" id="final">
+      <div class="tiny-label">ONE LAST LITTLE THING ♡</div>
+      <div class="final-emoji">🎁</div>
+      <h2>Happy Birthday,<br>My Babydoll! 💗</h2>
+      <p>
+        Out of all the people in this world, you're the one
+        I'd choose to make more memories with, again and again.
+      </p>
+      <p>
+        I love you, my bby, my darlin, my babe.
+        Today, tomorrow, and in all the little moments
+        still waiting for us. 🧿
+      </p>
+
+      <button id="finalSurprise" class="primary">
+        One more hug? 🫶
+      </button>
+      <p id="finalMessage" hidden class="handwritten">
+        Sending you the biggest hug in the whole world! 🤗💗
+        <br>You're my favourite. Always, Always, Alwaysss. 🥹
+      </p>
+      <button id="restart" class="text-button">↻ Start our story again</button>
+    </section>
+  </main>
+
+  <footer>Made with love, just for my Sovi ♡</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

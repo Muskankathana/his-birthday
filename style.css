@@ -1,0 +1,500 @@
+
+/* ===== BASIC RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff0f5;
+    color: #70485a;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== SCREEN SYSTEM ===== */
+.screen {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 70px 22px 45px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: fadeIn 0.7s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.welcome {
+    background: linear-gradient(145deg, #ffe0eb, #fff5f8, #fbd9e7);
+}
+
+.paper {
+    background: linear-gradient(145deg, #fff9fb, #fceaf1);
+}
+
+.final-screen {
+    background: linear-gradient(145deg, #fbdce8, #fff1f6);
+}
+
+/* ===== TEXT ===== */
+.tiny-label {
+    color: #b65b7e;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: #a75a78;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #a63d68;
+    font-size: clamp(40px, 8vw, 70px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #d36d91;
+}
+
+h2 {
+    color: #a63d68;
+    font-size: clamp(30px, 6vw, 44px);
+    margin-bottom: 22px;
+}
+
+h3 {
+    color: #a64d70;
+    margin-bottom: 8px;
+}
+
+.screen > p {
+    max-width: 620px;
+    font-size: 17px;
+    line-height: 1.9;
+    margin: 10px auto;
+}
+
+.intro {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.muted {
+    color: #a77d8d;
+}
+
+.hint {
+    color: #a77d8d;
+    font-size: 13px !important;
+    margin-top: 20px !important;
+}
+
+.handwritten {
+    color: #ad5277;
+    font-style: italic;
+    line-height: 2 !important;
+}
+
+/* ===== DECORATIONS ===== */
+.sticker {
+    font-size: 65px;
+    margin: 5px 0 20px;
+    animation: gentleBounce 2s infinite ease-in-out;
+}
+
+.big-heart {
+    font-size: 75px;
+    color: #d65c8b;
+    margin: 15px 0;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-emoji {
+    font-size: 75px;
+    margin-bottom: 20px;
+    animation: gentleBounce 2s infinite;
+}
+
+/* ===== BUTTONS ===== */
+.primary {
+    border: none;
+    border-radius: 40px;
+    background: #bd527b;
+    color: white;
+    padding: 15px 28px;
+    margin: 22px 5px 8px;
+    font-size: 15px;
+    box-shadow: 0 6px 18px #bd527b35;
+    transition: 0.3s ease;
+}
+
+.primary:hover {
+    background: #963b61;
+    transform: translateY(-3px);
+}
+
+.primary:active {
+    transform: scale(0.96);
+}
+
+.text-button {
+    border: none;
+    background: transparent;
+    color: #a75a78;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.text-button:hover {
+    color: #76304e;
+    text-decoration: underline;
+}
+
+.hint,
+.hint + button {
+    margin-top: 15px;
+}
+
+footer {
+    background: #fff0f5;
+    color: #a75a78;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* ===== MUSIC BUTTON ===== */
+.music-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+    background: #bd527b;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px #00000020;
+}
+
+/* ===== PHOTO SLIDESHOW ===== */
+.polaroid {
+    width: min(85%, 350px);
+    background: white;
+    padding: 13px 13px 20px;
+    margin: 25px auto 15px;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px #73475b25;
+    transform: rotate(-1deg);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+    touch-action: pan-y;
+}
+
+.polaroid p {
+    padding-top: 16px;
+    color: #a75a78;
+    font-style: italic;
+}
+
+.slide-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 15px auto;
+}
+
+.slide-controls button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #bd527b;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+}
+
+#slideCount {
+    color: #a75a78;
+    font-size: 14px;
+}
+
+/* ===== REASONS ===== */
+.reason-list {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reason {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 18px #73475b12;
+}
+
+.reason > span {
+    font-size: 32px;
+}
+
+.reason p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ===== LOVE LETTER ENVELOPE ===== */
+.envelope {
+    width: 210px;
+    height: 140px;
+    border: none;
+    border-radius: 8px;
+    background: #e9a6bc;
+    position: relative;
+    margin: 40px auto 20px;
+    box-shadow: 0 8px 20px #73475b25;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-5px);
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #f4c3d2;
+    clip-path: polygon(0 0, 50% 55%, 100% 0);
+    z-index: 2;
+}
+
+.envelope::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #d98ca8;
+    clip-path: polygon(0 100%, 50% 48%, 100% 100%);
+    z-index: 3;
+}
+
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+}
+
+.envelope-heart {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #b33d6b;
+    font-size: 28px;
+    z-index: 4;
+}
+
+.envelope-label {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    color: #76304e;
+    font-size: 13px;
+}
+
+/* ===== LOVE LETTER CONTENT ===== */
+.love-letter {
+    width: 100%;
+    max-width: 650px;
+    background: #fffdfb;
+    padding: 28px;
+    margin: 30px auto;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 8px 25px #73475b20;
+    animation: fadeIn 0.8s ease;
+}
+
+.love-letter p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* ===== FINAL MESSAGE ===== */
+#finalMessage {
+    background: #ffe3ed;
+    border-radius: 18px;
+    padding: 25px;
+    max-width: 550px;
+    margin: 20px auto;
+    animation: fadeIn 0.6s ease;
+}
+
+/* ===== FLOATING HEARTS ===== */
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 200;
+}
+
+.heart-particle {
+    position: absolute;
+    bottom: -40px;
+    animation: floatHeart 5s linear forwards;
+    opacity: 0.9;
+}
+
+/* ===== HIDDEN ELEMENTS ===== */
+[hidden] {
+    display: none !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+@keyframes gentleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes floatHeart {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+    .screen {
+        padding: 75px 20px 40px;
+    }
+
+    .tiny-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .intro,
+    .screen > p {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .polaroid {
+        width: 90%;
+        max-width: 310px;
+    }
+
+    .polaroid img {
+        height: 300px;
+    }
+
+    .reason {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .reason p {
+        font-size: 14px;
+    }
+
+    .love-letter {
+        padding: 20px;
+    }
+
+    .love-letter p {
+        font-size: 15px;
+    }
+
+    .primary {
+        max-width: 100%;
+        font-size: 14px;
+        padding: 14px 21px;
+    }
+
+    .music-button {
+        top: 10px;
+        right: 10px;
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
